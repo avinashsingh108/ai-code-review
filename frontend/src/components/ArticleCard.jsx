@@ -1,18 +1,26 @@
+import { useState } from "react";
 import { BiCommentDetail, BiUpvote } from "react-icons/bi";
 
 const ArticleCard = ({ article }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const imageSrc =
+    article.cover_image || article.social_image;
+
   return (
     <div className="bg-neutral-800/70 p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
       <a href={article.url} target="_blank" rel="noopener noreferrer">
-        <img
-          src={
-            article.cover_image ||
-            article.social_image ||
-            "default-image-url.jpg"
-          }
-          alt={article.title || "Article"}
-          className="w-full h-40 object-cover rounded-lg mb-3"
-        />
+        <div className="relative w-full h-40 mb-3">
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-lg" />
+          )}
+          <img
+            src={imageSrc}
+            alt={article.title || "Article"}
+            className="w-full h-40 object-cover rounded-lg"
+            onLoad={() => setImageLoaded(true)}
+          />
+        </div>
       </a>
       <a
         href={article.url}
@@ -52,12 +60,10 @@ const ArticleCard = ({ article }) => {
       </div>
       <div className="flex justify-between mt-2 text-sm text-gray-500">
         <span className="flex justify-center items-center gap-1 bg-neutral-800 rounded-lg px-3 py-1.5">
-          <BiUpvote className="text-lg" /> {article.public_reactions_count || 0}{" "}
-          Reactions
+          <BiUpvote className="text-lg" /> {article.public_reactions_count || 0} Reactions
         </span>
         <span className="flex justify-center items-center gap-1 bg-neutral-800 rounded-lg px-3 py-1.5">
-          <BiCommentDetail className="text-lg" /> {article.comments_count || 0}{" "}
-          Comments
+          <BiCommentDetail className="text-lg" /> {article.comments_count || 0} Comments
         </span>
       </div>
     </div>
