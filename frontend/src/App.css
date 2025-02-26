@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+textarea::placeholder {
+  font-size: 18px;
+  color: #bbbbbb;
+  opacity: 1;
+}
+
+.animated-gradient {
+  background-image: linear-gradient(
+    45deg,
+    #94bdff,
+    #a9e4ff,
+    #d4ff71,
+    #ffa2e5,
+    #ff8084,
+    #94bdff
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 10s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 639px) {
+  .markdown-output * {
+    font-size: 12px;
+  }
+  .markdown-output h1,
+  .markdown-output h2,
+  .markdown-output h3 {
+    color: #ffffff;
+    font-size: 14px !important;
+  }
+}
+
+.markdown-output strong {
+  font-weight: bold;
+  color: #ebebeb;
+}
