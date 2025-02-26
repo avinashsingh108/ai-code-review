@@ -49,7 +49,7 @@ const CodeInput = ({ code, setCode }) => {
 
   return (
     <div className="bg-gray-900 min-h-[60vh] w-full mx-auto">
-      <div className=" bg-gray-800 flex flex-col sm:flex-row w-full flex-wrap items-center justify-around text-white text-xs border-b border-gray-900">
+      <div className="hidden bg-gray-800 sm:flex sm:flex-row w-full flex-wrap items-center justify-around text-white text-xs border-b border-gray-900">
         <div className="flex flex-1 w-full items-center justify-center gap-2 bg-gray-900 py-2 cursor-pointer group">
           <VscSymbolColor />
           <select
