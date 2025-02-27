@@ -32,7 +32,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-bl from-black via-gray-800 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-bl from-black via-gray-900 to-black text-white">
       <section className="relative pt-28 md:pt-40 pb-8 px-6 text-center space-y-6">
         <div className="relative max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-300">

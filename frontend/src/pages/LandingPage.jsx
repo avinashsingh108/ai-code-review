@@ -12,7 +12,7 @@ const LandingPage = () => {
     <div className=" text-white">
       <Home />
 
-      <div className="bg-gradient-to-br from-black via-gray-800 to-black mx-auto px-4 py-10 relative">
+      <div className="bg-gradient-to-br from-black via-gray-900 to-black mx-auto px-4 py-10 relative">
         <div className="rounded-lg max-w-5xl mx-auto overflow-hidden backdrop-blur-xl">
           <div className="grid grid-cols-2 border-b border-gray-700/50">
             <button
