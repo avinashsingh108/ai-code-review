@@ -5,6 +5,9 @@ const cors = require("cors");
 const geminiRoute = require("./src/routes/geminiRoute");
 const articleRoute = require("./src/routes/articleRoute");
 const app = express();
+app.head("/ping", (req, res) => {
+  res.status(200).end();  
+});
 app.use(
   cors({
     origin: ["https://codeinsight-ai.vercel.app", "http://localhost:5173"],
