@@ -70,7 +70,7 @@ const ErrorAnalysis = () => {
   }, [errorData, stackOverflowArticles]);
   return (
     <>
-      <div className="max-w-5xl mx-auto text-white p-4 bg-[#1e1e1e]">
+      <div className="max-w-5xl mx-auto text-white  bg-[#1e1e1e] max-h-[70vh] overflow-auto  p-4">
         <CodeEditor
           value={errorText}
           language="json"
@@ -80,7 +80,7 @@ const ErrorAnalysis = () => {
             backgroundColor: "#1e1e1e",
             color: "#f8f8f8",
             fontSize: 14,
-            height: 400,
+            minHeight: 500,
             borderRadius: 8,
             overflow: "auto",
           }}
